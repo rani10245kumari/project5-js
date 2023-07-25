@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+
+    <!---------first page------->
+
+    <div id="tasklist">
+        <h1 id="task">Tasks<span id="list">List</span></h1>
+        <h2 id="noitemlist">No item in the todo list</h2>
+        <button class="plus button3" onclick="showAddTask()">
+            + <span id="button2">Add List</span>
+        </button>
+
+
+    </div>
+
+
+    <!---------parent container-------------->
+    <div class="container2" id="cardcontainer"></div>
+
+    <!--------popupbox--------------->
+    <div class="popupbox  hide" id="pop">
+        <h2 id="h2">Add New List</h2>
+        <input type="text" placeholder="Add new List" id="cardName" autocomplete="off"><br><br>
+        <button id="Add" onclick="addCard()">Add</button>
+        <button id="Close" onclick="hideAddTask()">Close</button>
+    </div>
+
+
+
+
+    <script src="./main.js"></script>
+</body>
+
+</html>

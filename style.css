@@ -1,0 +1,147 @@
+body {
+    background-color: rgb(49, 33, 38);
+    position: relative;
+
+}
+
+/*-----task list--------*/
+
+.taskList {
+    filter: blur(20px);
+}
+
+#task {
+    font-size: 50px;
+    color: white;
+    font-weight: bolder;
+    position: absolute;
+    left: 10%;
+    top: 2%;
+}
+
+#list {
+    font-size: 42px;
+    color: white;
+    font-weight: 250;
+
+}
+
+#noitemlist {
+    color: white;
+    font-size: 40px;
+    font-weight: 300;
+    position: absolute;
+    left: 10%;
+    top: 12vh;
+}
+
+/*--------plus sign-----------*/
+.plus {
+    border-radius: 50%;
+    padding: 10px 16px;
+    color: white;
+    background: rgb(209, 131, 174);
+    font-size: 25px;
+    position: absolute;
+    right: 25vw;
+    top: 10vh;
+}
+
+/*---add list button---*/
+#button2 {
+    font-size: 35px;
+    color: white;
+    position: absolute;
+    right: -10vw;
+}
+
+
+
+/*----------popup box----*/
+.popupbox {
+    height: 180px;
+    width: 280px;
+    border: 4px solid rgb(202, 43, 96);
+    border-radius: 15px;
+    background-color: antiquewhite;
+    position: fixed;
+    top: 50%;
+    left: 40%;
+}
+
+.hide {
+    display: none;
+}
+
+.blur-page {
+
+    filter: blur(20px);
+}
+
+/*-----inner styling in popupbox---------*/
+#h2 {
+    color: rgb(109, 5, 45);
+    font-size: 25px;
+    text-align: center;
+}
+
+#cardName {
+    font-size: 18px;
+    text-align: center;
+    margin-left: 20px;
+}
+
+#Add {
+    font-size: 18px;
+    color: rgb(41, 9, 14);
+    border: 2px solid rgb(41, 11, 21);
+    border-radius: 15px;
+    background-color: rgb(204, 156, 172);
+    margin-left: 40px;
+    margin-bottom: 10px;
+    height: 35px;
+    width: 80px;
+}
+
+#Close {
+    font-size: 18px;
+    color: rgb(41, 9, 14);
+    border: 2px solid rgb(41, 11, 21);
+    border-radius: 15px;
+    background-color: rgb(206, 159, 175);
+
+    margin-bottom: 5px;
+    height: 35px;
+    width: 80px;
+}
+
+/*--------parent container of cards----------*/
+.container2 {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 65px;
+    justify-content: space-between;
+
+
+
+}
+
+/*------card design------*/
+.flexcard {
+    height: 300px;
+    width: 240px;
+    margin-top: 200px;
+    border: 5px solid rgb(221, 174, 112);
+    border-radius: 10px;
+    background-color: rgb(211, 135, 164);
+    font-size: 22px;
+    color: blueviolet;
+    text-align: center;
+
+}
+
+/*---------delete button design---------------------*/
+.deletebutton {
+    background-image: url("./deleteButton.png");
+
+}
