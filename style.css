@@ -128,9 +128,10 @@ body {
 
 /*------card design------*/
 .flexcard {
-    height: 300px;
-    width: 240px;
-    margin-top: 200px;
+    height: 320px;
+    width: 270px;
+    position: relative;
+    top: 200px;
     border: 5px solid rgb(221, 174, 112);
     border-radius: 10px;
     background-color: rgb(211, 135, 164);
@@ -141,12 +142,20 @@ body {
 }
 
 /*---------delete button design---------------------*/
-.deletebutton {
-    background-image: url("./deleteButton.png");
+.deleteButton {
+    position: absolute;
+    bottom: 2vh;
+    right: 2vw;
 
 }
 
-/*----------dynamic pop3 design----------*/
+.addItem {
+    position: absolute;
+    bottom: 2vh;
+    left: 2vw;
+}
+
+/*----------dynamic pop3 design(last)----------*/
 .pop3 {
     height: 180px;
     width: 280px;
@@ -170,73 +179,89 @@ body {
     margin-left: 20px;
 }
 
-.Add {
+.button4 {
     font-size: 18px;
     color: rgb(41, 9, 14);
     border: 2px solid rgb(41, 11, 21);
     border-radius: 15px;
     background-color: rgb(204, 156, 172);
     margin-left: 40px;
-    margin-bottom: 10px;
+    margin-bottom: 5 px;
     height: 35px;
     width: 80px;
 }
 
-.Close {
+.button5 {
     font-size: 18px;
     color: rgb(41, 9, 14);
     border: 2px solid rgb(41, 11, 21);
     border-radius: 15px;
     background-color: rgb(206, 159, 175);
-
     margin-bottom: 5px;
     height: 35px;
     width: 80px;
 }
 
-/*--------*/
+/*-----Choosing a single particular card---*/
 .selectedcard {
     margin: auto;
     width: 300px;
     display: none;
 
+    justify-content: center;
+
 }
 
-/*-------navbar------*/
+/*-------navbar for backbutton -----------------------*/
 header {
-    display: flex;
+    /* display: flex;
     justify-content: space-evenly;
     height: 100px;
 
     border: 2px solid rgb(129, 151, 146);
+    */
+    display: flex;
+    height: 70px;
+    position: relative;
+    justify-content: space-evenly;
+    gap: 50px;
+    display: none;
 }
 
 .backbutton {
-    height: 50px;
-    width: 80px;
-    margin-top: 40px;
-    margin-left: 10px;
-    font-size: 24px;
-    box-shadow: 10px red;
-    background-color: rgb(30, 8, 51);
-    color: rgb(219, 209, 228);
+
+    width: 18vw;
+    height: 6vh;
+    color: white;
+    position: absolute;
+    left: 10vw;
+    top: 8vh;
+    border: 3px solid rgb(229, 215, 215);
+    border-radius: 15px;
+    background-color: rgb(8, 44, 41);
+    font-weight: bolder;
+    font-size: 20px;
+
 }
 
-.blank {
-    font-size: 24px;
-    color: white;
+#blankk {
+    position: absolute;
+    top: 8vh;
+    left: 40vw;
     text-align: center;
+    font-size: 4.8vw;
 }
 
 .plus2 {
-    height: 40px;
-    width: 40px;
+    height: 50px;
+    width: 50px;
     border-radius: 50%;
-    background-color: rgb(87, 133, 133);
-    color: rgb(6, 36, 36);
+    background-color: rgb(23, 136, 136);
+    color: rgb(161, 209, 228);
     font-size: 24px;
-    margin-top: 60px;
+    position: absolute;
+    top: 8vh;
+    right: 20vw;
 
-    margin-right: 0px;
 
 }
