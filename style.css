@@ -1,10 +1,13 @@
 body {
     background-color: rgb(49, 33, 38);
     position: relative;
+    background-image: url("./background.jpg");
+    /* background-repeat: no-repeat; */
+    background-size: cover;
 
 }
 
-/*-----task list--------*/
+/*----------task list---------------*/
 
 .taskList {
     filter: blur(20px);
@@ -57,10 +60,10 @@ body {
 
 
 
-/*----------popup box----*/
+/*----------popup box----------------*/
 .popupbox {
-    height: 180px;
-    width: 280px;
+    height: 240px;
+    width: 300px;
     border: 4px solid rgb(202, 43, 96);
     border-radius: 15px;
     background-color: antiquewhite;
@@ -68,6 +71,8 @@ body {
     top: 50%;
     left: 40%;
 }
+
+
 
 .hide {
     display: none;
@@ -78,30 +83,47 @@ body {
     filter: blur(20px);
 }
 
-/*-----inner styling in popupbox---------*/
+/*----------------inner styling in popupbox---------*/
 #h2 {
     color: rgb(109, 5, 45);
     font-size: 25px;
     text-align: center;
+    position: absolute;
+    left: 5vw;
 }
 
 #cardName {
     font-size: 18px;
     text-align: center;
-    margin-left: 20px;
+    position: absolute;
+    left: 3vw;
+    top: 4.4vw;
 }
 
+#cartoon {
+    height: 90px;
+    width: 90px;
+    border-radius: 50%;
+    position: absolute;
+    top: 14vh;
+    left: 7vw;
+}
+
+/* ---------ADD BUTTON ---------------------- */
 #Add {
     font-size: 18px;
     color: rgb(41, 9, 14);
     border: 2px solid rgb(41, 11, 21);
     border-radius: 15px;
     background-color: rgb(204, 156, 172);
-    margin-left: 40px;
-    margin-bottom: 10px;
+    position: absolute;
+    left: 5vw;
+    top: 29vh;
     height: 35px;
     width: 80px;
 }
+
+/* ----------------CLOSE BUTTON---------------- */
 
 #Close {
     font-size: 18px;
@@ -109,8 +131,9 @@ body {
     border: 2px solid rgb(41, 11, 21);
     border-radius: 15px;
     background-color: rgb(206, 159, 175);
-
-    margin-bottom: 5px;
+    position: absolute;
+    top: 29vh;
+    left: 12vw;
     height: 35px;
     width: 80px;
 }
@@ -146,13 +169,22 @@ body {
     position: absolute;
     bottom: 2vh;
     right: 2vw;
-
+    background-image: url("./delete.jpeg");
+    background-size: cover;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
 }
 
 .addItem {
     position: absolute;
     bottom: 2vh;
     left: 2vw;
+    background-image: url("./add.jpeg");
+    background-size: cover;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
 }
 
 /*----------dynamic pop3 design(last)----------*/
@@ -202,6 +234,26 @@ body {
     width: 80px;
 }
 
+/*--------marking the text ----------------*/
+.p {
+    display: flex;
+    font-size: 18px;
+    gap: 10px;
+    justify-content: center;
+    align-items: baseline;
+}
+
+.space {
+    line-height: 2px;
+
+}
+
+.mark {
+    height: 24px;
+
+
+}
+
 /*-----Choosing a single particular card---*/
 .selectedcard {
     margin: auto;
@@ -214,12 +266,6 @@ body {
 
 /*-------navbar for backbutton -----------------------*/
 header {
-    /* display: flex;
-    justify-content: space-evenly;
-    height: 100px;
-
-    border: 2px solid rgb(129, 151, 146);
-    */
     display: flex;
     height: 70px;
     position: relative;
@@ -230,17 +276,17 @@ header {
 
 .backbutton {
 
-    width: 18vw;
-    height: 6vh;
+    width: 16vw;
+    height: 8vh;
     color: white;
     position: absolute;
     left: 10vw;
-    top: 8vh;
+    top: 9vh;
     border: 3px solid rgb(229, 215, 215);
     border-radius: 15px;
-    background-color: rgb(8, 44, 41);
+    background-image: linear-gradient(#330011, #80002a, #ff3377);
     font-weight: bolder;
-    font-size: 20px;
+    font-size: 24px;
 
 }
 
@@ -250,18 +296,4 @@ header {
     left: 40vw;
     text-align: center;
     font-size: 4.8vw;
-}
-
-.plus2 {
-    height: 50px;
-    width: 50px;
-    border-radius: 50%;
-    background-color: rgb(23, 136, 136);
-    color: rgb(161, 209, 228);
-    font-size: 24px;
-    position: absolute;
-    top: 8vh;
-    right: 20vw;
-
-
 }
