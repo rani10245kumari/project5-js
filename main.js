@@ -2,30 +2,36 @@
 const addTask = document.getElementById('pop')
 let visiblee = false;
 const parent = document.getElementById('tasklist')
+let noitem = document.getElementById("noitemlist")
+let count = 0
 
 function showAddTask() {
+    count++
     if (visiblee) {
         addTask.classList.remove("hide")
         visiblee = false;
         parent.classList.add('blur-page');
+        addTask.classList.remove("hide")
+
 
     } else {
         addTask.classList.remove("hide")
         visiblee = true;
         parent.classList.add('blur-page');
-
+        if (count >= 1) {
+            noitem.remove()
+        }
     }
 
 }
 //--------------hide pop up box------
 function hideAddTask() {
-    /* const addTask = document.getElementById('pop')
-     addTask.setAttribute("class", "popupbox   hide");
-     parent.classList.remove("parent");
-     parent.classList.remove('blur-page');
-     visiblee = false;
-     addTask.classList.add("hide")*/
-    pop.remove()
+    const addTask = document.getElementById('pop')
+    addTask.setAttribute("class", "popupbox   hide");
+    parent.classList.remove("parent");
+    parent.classList.remove('blur-page');
+    visiblee = false;
+    addTask.classList.add("hide")
 
 }
 
@@ -34,7 +40,7 @@ function hideAddTask() {
 
 
 
-//---------------creating card by js---------
+//---------------creating flex-card by js---------
 
 const containerCard = document.getElementById("cardcontainer")
 const newCardName = document.getElementById("cardName")
@@ -50,6 +56,7 @@ let button3 = document.getElementsByClassName("button3")
 function addCard() {
     var newCard = document.createElement("div")
     var cardTitle = document.createElement("h2")
+    // var title2= document.createElement("h3")
     var hrline = document.createElement("hr")
     var itemList = document.createElement("div")
     var deleteButton = document.createElement("button")
@@ -61,7 +68,7 @@ function addCard() {
     newCard.appendChild(cardTitle)
     newCard.appendChild(hrline)
     newCard.appendChild(itemList)
-
+    // newCard.appendChild(title2)
     newCard.appendChild(deleteButton)
     newCard.appendChild(addItem)
     containerCard.appendChild(newCard)
@@ -77,7 +84,7 @@ function addCard() {
     deleteButton.innerHTML = "❌";
     addItem.innerHTML = "+"
 
-    /*------creating event listner----*/
+    /*------creating event listner on plus and delete button--------*/
     addItem.addEventListener("click", () => {
         newCard.style.height = "auto";
 
@@ -89,34 +96,14 @@ function addCard() {
         popup2(itemList)
     })
 
-    /*  deleteButton.style = `
-      color:rgb(109, 5, 45);
-      background-color:antiquewhite;
-      margin:auto;
-      margin-bottom:10px;
-      height:50px;
-      width:100px;
-      font-size:18px;
-      border:3px solid rgb(156, 96, 110) 
-      border-radius:8px;
-      `;
-      addItem.style = `
-      color:rgb(109, 5, 45);
-      background-color:antiquewhite;
-      margin:auto;
-      margin-bottom:-10px;
-      font-size:18px;
-      border:3px solid rgb(156, 96, 110) 
-      border-radius:8px;
-      `;
-  */
 
 
-    /*-------------------itemlist popup----------*/
+
+
+    /*-------------------Adding particular item on popup----------*/
 
     function popup2(itemList) {
         var pop3 = document.createElement("div");
-
         var h2 = document.createElement("h2")
         let input = document.createElement("input")
         let button4 = document.createElement("button")
@@ -134,16 +121,37 @@ function addCard() {
         button5.classList.add("button5");
         button5.innerText = "Close"
 
+        //-------------Adding event listner on add popup button---------
 
         button4.addEventListener("click", function () {
-            var item = document.createElement('div')
-            item.innerText = input.value
-            itemList.appendChild(item)
-
+            const p = document.createElement("p")
+            p.classList.add("inline")
+            h2.innerText = input.value
+            pop3.style.display = "none"
+            const mark = document.createElement("button")
+            itemList.appendChild(p)
+            itemList.classList.add("space")
+            mark.innerText = "ok"
+            p.appendChild(h2)
+            p.appendChild(mark)
+            mark.classList.add("mark")
+            containerCard.classList.remove("blur-page")
+            mark.addEventListener("click", function () {
+                workdone()
+            })
+            function workdone() {
+                h2.style.textDecoration = "line-through"
+                h2.style.color = "blue"
+                h2.style.fontWeight = "bolder"
+                mark.remove()
+            }
         })
 
+
+        //-----------------Event listner on close button of popup---------
         button5.addEventListener("click", function () {
             pop3.remove()
+
         })
 
 
@@ -154,7 +162,7 @@ function addCard() {
         pop3.appendChild(button5)
 
     }
-    /*-------on click of h2-------------*/
+    /*-------on click of h2------------------*/
     cardTitle.addEventListener("click", function () {
         containerCard.style.display = "none"
         selectCard.style.display = "block"
@@ -175,15 +183,10 @@ function addCard() {
         revert();
     })
     function revert() {
-        //cardcontainer.style.display = "none"
-        // selectCard.style.display = "flex"
-        // selectCard.appendChild(pop3)
         selectCard.style.display = "none"
         cardcontainer.style.display = "flex"
         cardcontainer.style.flexDirection = "row"
-        //cardcontainer.style.justifyContent="center"
         cardcontainer.appendChild(newCard)
-
         navbar.style.display = "none"
         parent.style.display = "block"
         parent.setAttribute("class", "")
