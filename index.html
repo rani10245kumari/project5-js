@@ -6,11 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./media.css">
 </head>
 
 <body>
 
-    <!---------first page------->
+    <!-------------------First page---------------------->
 
     <div id="tasklist">
         <h1 id="task">Tasks<span id="list">List</span></h1>
@@ -22,20 +23,23 @@
 
     </div>
 
-    <!---last popup-->
+    <!------------last popup backbutton---------->
     <header>
         <button class="backbutton">Back</button>
-        <div class="blank"></div>
-        <button class="plus2" onclick="plus2()">+</button>
+        <div class="blank" id="blankk"></div>
+        <button class="plus button3" onclick="showAddTask()">
+            +
+        </button>
     </header>
 
-    <!---------parent container-------------->
+    <!---------------parent container-------------->
     <div class="container2" id="cardcontainer"></div>
     <div class="selectedcard" id="selectedcard"></div>
 
-    <!--------popupbox--------------->
+    <!-----------------First popupbox-------------------->
     <div class="popupbox  hide" id="pop">
         <h2 id="h2">Add New List</h2>
+        <img src="./Shinchan.webp" id="cartoon">
         <input type="text" placeholder="Add new List" id="cardName" autocomplete="off"><br><br>
         <button id="Add" onclick="addCard()">Add</button>
         <button id="Close" onclick="hideAddTask()">Close</button>
