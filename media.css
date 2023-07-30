@@ -1,0 +1,128 @@
+/* -------------MEDIA QUERRY------------------- */
+@media screen and (max-width:700px) {
+    body {
+        overflow-x: hidden;
+    }
+
+    #task {
+        font-size: 36px;
+        top: 5vh;
+    }
+
+    #list {
+        font-size: 26px;
+
+    }
+
+    #noitemlist {
+        font-size: 26px;
+        font-weight: 250;
+        top: 18vh;
+    }
+
+    /*--------plus sign-----------*/
+    .plus {
+        font-size: 16px;
+        right: 24vw;
+        top: 8vh;
+    }
+
+    /* add list button */
+    #button2 {
+        font-size: 24px;
+        right: -25vw;
+    }
+
+    /*----------popup box----------------*/
+    .popupbox {
+        height: 240px;
+        width: 300px;
+        border-radius: 15px;
+        top: 40%;
+        left: 10%;
+    }
+
+    /* inner styling of popup box */
+    #h2 {
+        left: 18vw;
+    }
+
+    #cardName {
+        left: 8vw;
+        top: 14vw;
+    }
+
+    #cartoon {
+
+        top: vh;
+        left: 27vw;
+    }
+
+    /* ---------ADD BUTTON ---------------------- */
+    #Add {
+
+        left: 12vw;
+    }
+
+    /* ----------------CLOSE BUTTON---------------- */
+
+    #Close {
+        left: 44vw;
+    }
+
+
+    /*------card design------*/
+    .flexcard {
+        left: 10vw;
+    }
+
+    /*----------dynamic pop3 design(last)----------*/
+    .pop3 {
+        height: 160px;
+        width: 260px;
+        top: 40%;
+        left: 15%;
+    }
+
+    .button4 {
+        position: relative;
+        top: 2.5vh;
+    }
+
+    .button5 {
+        position: relative;
+        top: 2.5vh;
+        left: 5vw;
+    }
+
+    /*-----Choosing a single particular card---*/
+    .selectedcard {
+        margin-left: 10px;
+        width: 260px;
+    }
+
+    /*-------navbar for backbutton -----------------------*/
+    header {
+        height: 50px;
+        gap: 40px;
+    }
+
+    .backbutton {
+        width: 20vw;
+        height: 7vh;
+        left: 10vw;
+        top: 9vh;
+        font-weight: bolder;
+        font-size: 20px;
+    }
+
+    #blankk {
+        top: 8vh;
+        left: 40vw;
+        text-align: center;
+        font-size: 26px;
+    }
+
+
+
+}
