@@ -3,25 +3,20 @@ const addTask = document.getElementById('pop')
 let visiblee = false;
 const parent = document.getElementById('tasklist')
 let noitem = document.getElementById("noitemlist")
-let count = 0
+var count = 0
 
+
+//------CLICK ON ADD-ITEM-------------
 function showAddTask() {
     count++
-    if (visiblee) {
-        addTask.classList.remove("hide")
-        visiblee = false;
-        parent.classList.add('blur-page');
-        addTask.classList.remove("hide")
-
-
-    } else {
-        addTask.classList.remove("hide")
-        visiblee = true;
-        parent.classList.add('blur-page');
-        if (count >= 1) {
-            noitem.remove()
-        }
+    addTask.classList.remove("hide")
+    visiblee = false;
+    parent.classList.add('blur-page');
+    addTask.classList.remove("hide")
+    if (count >= 1) {
+        noitem.remove()
     }
+
 
 }
 //--------------hide pop up box------
@@ -37,9 +32,6 @@ function hideAddTask() {
 
 
 
-
-
-
 //---------------creating flex-card by js---------
 
 const containerCard = document.getElementById("cardcontainer")
@@ -52,8 +44,9 @@ const plussign = document.getElementsByClassName("plus2")
 let button3 = document.getElementsByClassName("button3")
 
 
-
+//----ON CLICK OF ADD BUTTON----------
 function addCard() {
+    count++
     var newCard = document.createElement("div")
     var cardTitle = document.createElement("h2")
     // var title2= document.createElement("h3")
@@ -61,6 +54,11 @@ function addCard() {
     var itemList = document.createElement("div")
     var deleteButton = document.createElement("button")
     var addItem = document.createElement("button")
+
+    //---------Removing blur page--------------------
+    addTask.classList.add("hide")
+
+    parent.classList.remove('blur-page');
 
 
 
@@ -73,7 +71,7 @@ function addCard() {
     newCard.appendChild(addItem)
     containerCard.appendChild(newCard)
 
-    //-------giving style to card made by js-----------
+    //-------Giving style to card made by js-----------
     newCard.classList.add("flexcard")
     deleteButton.classList.add("deleteButton")
     addItem.classList.add("addItem")
@@ -81,8 +79,6 @@ function addCard() {
     //-------------giving value on cards-------
     cardTitle.innerText = newCardName.value
     newCardName.value = ""
-    deleteButton.innerHTML = "❌";
-    addItem.innerHTML = "+"
 
     /*------creating event listner on plus and delete button--------*/
     addItem.addEventListener("click", () => {
@@ -131,7 +127,7 @@ function addCard() {
             const mark = document.createElement("button")
             itemList.appendChild(p)
             itemList.classList.add("space")
-            mark.innerText = "ok"
+            mark.innerText = "done ✔"
             p.appendChild(h2)
             p.appendChild(mark)
             mark.classList.add("mark")
@@ -141,7 +137,7 @@ function addCard() {
             })
             function workdone() {
                 h2.style.textDecoration = "line-through"
-                h2.style.color = "blue"
+                h2.style.color = "#330011"
                 h2.style.fontWeight = "bolder"
                 mark.remove()
             }
@@ -178,7 +174,7 @@ function addCard() {
 
     })
 
-    //----------------backbutton---------------
+    //----------------Backbutton---------------
     backbutton[0].addEventListener("click", function () {
         revert();
     })
