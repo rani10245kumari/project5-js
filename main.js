@@ -102,16 +102,18 @@ function addCard() {
         var pop3 = document.createElement("div");
         var h2 = document.createElement("h2")
         let input = document.createElement("input")
+        let image = document.createElement("img")
         let button4 = document.createElement("button")
         let button5 = document.createElement("button")
         let body = document.querySelector('body')
 
         pop3.classList.add("pop3")
         pop3.style.display = "block";
-        h2.innerText = "Add New List";
+        h2.innerText = "Add New Item";
         h2.classList.add("h2")
         console.log("here")
         input.setAttribute("id", "newCardName")
+        image.classList.add("image")
         button4.classList.add("button4");
         button4.innerText = "Add"
         button5.classList.add("button5");
@@ -154,6 +156,7 @@ function addCard() {
         body.appendChild(pop3);
         pop3.appendChild(h2)
         pop3.appendChild(input)
+        pop3.appendChild(image)
         pop3.appendChild(button4)
         pop3.appendChild(button5)
 
