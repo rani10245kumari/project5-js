@@ -2,9 +2,8 @@ body {
     background-color: rgb(49, 33, 38);
     position: relative;
     background-image: url("./background.jpg");
-    /* background-repeat: no-repeat; */
     background-size: cover;
-
+    overflow-x: hidden;
 }
 
 /*----------task list---------------*/
@@ -35,7 +34,7 @@ body {
     font-weight: 300;
     position: absolute;
     left: 10%;
-    top: 12vh;
+    top: 14vh;
 }
 
 /*--------plus sign-----------*/
@@ -146,15 +145,15 @@ body {
     flex-wrap: wrap;
     gap: 65px;
     justify-content: space-between;
-
+    position: relative;
+    top: 40vh;
 }
 
 /*------card design------*/
 .flexcard {
+    position: relative;
     height: 50vh;
     width: 22vw;
-    position: relative;
-    top: 40vh;
     border: 7px solid rgb(221, 174, 112);
     border-radius: 15px;
     background-color: rgb(211, 135, 164);
@@ -163,7 +162,6 @@ body {
     text-align: center;
     background-image: url("./sin2.webp");
     background-size: cover;
-
 }
 
 /*---------delete button design---------------------*/
@@ -275,12 +273,11 @@ body {
 /*-----Choosing a single particular card---*/
 .selectedcard {
     position: absolute;
-    top: 6vh;
+    top: 40vh;
     left: 30vw;
     width: 40vw;
     display: none;
     justify-content: center;
-
 }
 
 /*-------navbar for backbutton -----------------------*/
