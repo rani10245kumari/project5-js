@@ -12,6 +12,7 @@ function showAddTask() {
     addTask.classList.remove("hide")
     visiblee = false;
     parent.classList.add('blur-page');
+    cardcontainer.style.filter = "blur(5px)"
     addTask.classList.remove("hide")
     if (count >= 1) {
         noitem.remove()
@@ -36,7 +37,7 @@ function hideAddTask() {
 
 const containerCard = document.getElementById("cardcontainer")
 const newCardName = document.getElementById("cardName")
-let selectCard = document.getElementById("selectedcard")
+let selectCard = document.getElementById("selectedcard2")
 let navbar = document.querySelector("header")
 const blankspace = document.getElementById("blankk")
 const backbutton = document.getElementsByClassName("backbutton")
@@ -75,6 +76,7 @@ function addCard() {
     newCard.classList.add("flexcard")
     deleteButton.classList.add("deleteButton")
     addItem.classList.add("addItem")
+    cardcontainer.style.filter = "blur(0px)"
 
     //-------------giving value on cards-------
     cardTitle.innerText = newCardName.value
@@ -83,18 +85,22 @@ function addCard() {
     /*------creating event listner on plus and delete button--------*/
     addItem.addEventListener("click", () => {
         newCard.style.height = "auto";
-
         popup2(itemList)
+        cardcontainer.style.filter = "blur(5px)"
+        selectCard.style.filter = "blur(5px)"
+        parent.style.filter = "blur(5px)"
+        navbar.style.filter = "blur(5px)"
     })
     deleteButton.addEventListener("click", () => {
-        newCard.remove();
-
-        popup2(itemList)
+        newCard.style.display = "none"
+        //newCard.remove();
+        blankspace.innerText = " "
+        if (containerCard.childNodes.length === 1) {
+            noitem.style.display = "block";
+        } else {
+            noitem.style.display = "none";
+        }
     })
-
-
-
-
 
     /*-------------------Adding particular item on popup----------*/
 
@@ -122,6 +128,10 @@ function addCard() {
         //-------------Adding event listner on add popup button---------
 
         button4.addEventListener("click", function () {
+            cardcontainer.style.filter = "blur(0px)"
+            selectCard.style.filter = "blur(0px)"
+            parent.style.filter = "blur(0px)"
+            navbar.style.filter = "blur(0px)"
             const p = document.createElement("p")
             p.classList.add("inline")
             h2.innerText = input.value
@@ -142,16 +152,18 @@ function addCard() {
                 h2.style.color = "#330011"
                 h2.style.fontWeight = "bolder"
                 mark.remove()
+
             }
+
         })
-
-
         //-----------------Event listner on close button of popup---------
         button5.addEventListener("click", function () {
-            pop3.remove()
-
+            pop3.remove();
+            cardcontainer.style.filter = "blur(0px)"
+            selectCard.style.filter = "blur(0px)"
+            parent.style.filter = "blur(0px)"
+            navbar.style.filter = "blur(0px)"
         })
-
 
         body.appendChild(pop3);
         pop3.appendChild(h2)
@@ -164,7 +176,7 @@ function addCard() {
     /*-------on click of h2------------------*/
     cardTitle.addEventListener("click", function () {
         containerCard.style.display = "none"
-        selectCard.style.display = "block"
+        //selectCard.style.display = "block"
         selectCard.appendChild(newCard)
         selectCard.style.display = "flex"
         navbar.style.display = "block"
@@ -172,9 +184,6 @@ function addCard() {
         // button3[0].style.display = "none"
         blankspace.innerText = cardTitle.innerText
         blankspace.style.color = "white"
-
-
-
     })
 
     //----------------Backbutton---------------
@@ -189,7 +198,7 @@ function addCard() {
         navbar.style.display = "none"
         parent.style.display = "block"
         parent.setAttribute("class", "")
-        selectCard.removeChild(newCard)
+        selectCard.innerText = " "
 
     }
 
