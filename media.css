@@ -1,5 +1,5 @@
 /* -------------MEDIA QUERRY------------------- */
-@media screen and (max-width:698px) {
+@media screen and (min-width:280px) and (max-width:698px) {
     body {
         overflow-x: hidden;
     }
@@ -17,11 +17,13 @@
         font-weight: 250;
     }
 
+
+
     /*--------plus sign-----------*/
     .plus {
-        font-size: 16px;
+        font-size: 20px;
         right: 24vw;
-        top: 3vh;
+        top: 9vh;
     }
 
     /* add list button */
@@ -75,7 +77,7 @@
     /*------card design------*/
     .flexcard {
         left: 7vw;
-        width: 74vw;
+        width: 72vw;
     }
 
     .deleteButton {
@@ -130,13 +132,6 @@
         width: 18vw;
     }
 
-
-    /*-----Choosing a single particular card---*/
-    .selectedcard {
-        margin-left: 10px;
-        width: 260px;
-    }
-
     /*-------navbar for backbutton -----------------------*/
     header {
         height: 60px;
@@ -160,18 +155,12 @@
         font-size: 26px;
     }
 
-    .plus {
-        font-size: 22px;
-        right: 14vw;
-        top: 9vh;
-    }
 
     /*-----Choosing a single particular card---*/
     .selectedcard {
-        width: 74vw;
-        height: 20vh;
-        top: 4vh;
-        left: 2vw;
+        width: 90vw;
+        top: 45vh;
+        left: 0vw;
 
     }
 }
@@ -198,10 +187,11 @@
 
     /*--------plus sign-----------*/
     .plus {
-        font-size: 40px;
-        right: 28vw;
-        top: 7vh;
+        font-size: 45px;
+        right: 32vw;
+        top: 8vh;
     }
+
 
     /* add list button */
     #button2 {
@@ -255,8 +245,8 @@
 
     /*------card design------*/
     .flexcard {
-        left: 22vw;
-        width: 55vw;
+        width: 57vw;
+        left: 18vw;
     }
 
     .deleteButton {
@@ -312,9 +302,9 @@
 
     /*-----Choosing a single particular card---*/
     .selectedcard {
-        width: 50vw;
-        top: 4vh;
-        left: 2vw;
+        width: 65vw;
+        top: 40vh;
+        left: 0vw;
     }
 
     /*-------navbar for backbutton -----------------------*/
@@ -330,7 +320,7 @@
         top: 9vh;
         font-weight: bold;
         font-size: 20px;
-        position: absolute;
+        /* position: absolute; */
     }
 
     #blankk {
@@ -339,16 +329,5 @@
         text-align: center;
         font-size: 50px;
     }
-
-    .plus {
-        font-size: 45px;
-        right: 14vw;
-        top: 9vh;
-    }
-
-
-
-
-
 
 }
