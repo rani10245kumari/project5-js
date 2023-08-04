@@ -84,7 +84,7 @@ function addCard() {
 
     /*------creating event listner on plus and delete button--------*/
     addItem.addEventListener("click", () => {
-        newCard.style.height = "auto";
+       //newCard.style.height = "auto";
         popup2(itemList)
         cardcontainer.style.filter = "blur(5px)"
         selectCard.style.filter = "blur(5px)"
@@ -150,7 +150,7 @@ function addCard() {
             })
             function workdone() {
                 h2.style.textDecoration = "line-through"
-                h2.style.color = "#001a1a"
+                h2.style.color = "#072f70"
                 h2.style.fontWeight = "bolder"
                 mark.remove()
 
