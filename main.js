@@ -74,6 +74,7 @@ function addCard() {
 
     //-------Giving style to card made by js-----------
     newCard.classList.add("flexcard")
+    cardTitle.classList.add("headname")
     deleteButton.classList.add("deleteButton")
     addItem.classList.add("addItem")
     cardcontainer.style.filter = "blur(0px)"
@@ -84,7 +85,7 @@ function addCard() {
 
     /*------creating event listner on plus and delete button--------*/
     addItem.addEventListener("click", () => {
-       //newCard.style.height = "auto";
+        newCard.style.height = "auto";
         popup2(itemList)
         cardcontainer.style.filter = "blur(5px)"
         selectCard.style.filter = "blur(5px)"
@@ -116,7 +117,7 @@ function addCard() {
         pop3.classList.add("pop3")
         pop3.style.display = "block";
         h2.innerText = "Add New Item";
-        h2.classList.add("h2")
+        h2.classList.add("hh2")
         console.log("here")
         input.setAttribute("id", "newCardName")
         input.setAttribute('autocomplete', 'off')
@@ -134,7 +135,6 @@ function addCard() {
             parent.style.filter = "blur(0px)"
             navbar.style.filter = "blur(0px)"
             const p = document.createElement("p")
-            p.classList.add("inline")
             h2.innerText = input.value
             pop3.style.display = "none"
             const mark = document.createElement("button")
@@ -150,7 +150,7 @@ function addCard() {
             })
             function workdone() {
                 h2.style.textDecoration = "line-through"
-                h2.style.color = "#072f70"
+                h2.style.color = "#001a1a"
                 h2.style.fontWeight = "bolder"
                 mark.remove()
 
