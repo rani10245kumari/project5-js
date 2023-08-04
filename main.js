@@ -119,6 +119,7 @@ function addCard() {
         h2.classList.add("h2")
         console.log("here")
         input.setAttribute("id", "newCardName")
+        input.setAttribute('autocomplete', 'off')
         image.classList.add("image")
         button4.classList.add("button4");
         button4.innerText = "Add"
