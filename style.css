@@ -171,7 +171,7 @@ body {
 }
 
 p {
-    display: flex;
+   
     font-size: 18px;
     text-align: center;
     align-items: baseline;
@@ -191,7 +191,6 @@ p {
     text-decoration: none;
     position: relative;
     top: 0.6vh;
-    left: 6vw;
     display: inline-block;
     background-color: darkturquoise;
 }
