@@ -150,7 +150,7 @@ function addCard() {
             })
             function workdone() {
                 h2.style.textDecoration = "line-through"
-                h2.style.color = "#330011"
+                h2.style.color = "#001a1a"
                 h2.style.fontWeight = "bolder"
                 mark.remove()
 
