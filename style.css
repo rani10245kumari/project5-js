@@ -84,7 +84,7 @@ body {
 
 /*----------------inner styling in popupbox---------*/
 #h2 {
-    color:  rgb(6, 240, 228);
+    color: rgb(185, 39, 95);
     font-size: 1.5em;
     text-align: center;
     position: absolute;
@@ -152,16 +152,48 @@ body {
 /*------card design------*/
 .flexcard {
     position: relative;
-    height: 50vh;
-    width: 22vw;
+    min-height: 50vh;
+    width: 23vw;
     border: 7px solid rgb(221, 174, 112);
     border-radius: 15px;
     background-color: rgb(211, 135, 164);
-    font-size: 22px;
-    color: rgb(250, 96, 181);
-    text-align: center;
     background-image: url("./sin2.webp");
     background-size: cover;
+    word-wrap: break-word;
+
+}
+
+.headname {
+    word-wrap: break-word;
+    font-size: 22px;
+    text-align: center;
+    color: rgb(231, 79, 163);
+}
+
+p {
+    display: flex;
+    font-size: 18px;
+    text-align: center;
+    align-items: baseline;
+}
+
+.space {
+    margin-left: 10px;
+    line-height: 4px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    height: 180px;
+}
+
+.mark {
+    width: 6vw;
+    height: 5vh;
+    text-decoration: none;
+    position: relative;
+    top: 0.6vh;
+    left: 6vw;
+    display: inline-block;
+    background-color: darkturquoise;
 }
 
 /*---------delete button design---------------------*/
@@ -199,10 +231,12 @@ body {
     left: 40%;
 }
 
-.h2 {
-    color: rgb(20, 4, 10);;
+.hh2 {
+    color: rgb(189, 5, 45);
     font-size: 25px;
+    font-weight: bold;
     text-align: center;
+    word-wrap: break-word;
 }
 
 #newCardName {
@@ -256,19 +290,12 @@ body {
 .p {
     display: flex;
     font-size: 18px;
-    gap: 10px;
+    gap: 8px;
     justify-content: center;
     align-items: baseline;
 }
 
-.space {
-    line-height: 2px;
 
-}
-
-.mark {
-    height: 24px;
-}
 
 /*-----Choosing a single particular card---*/
 .selectedcard {
