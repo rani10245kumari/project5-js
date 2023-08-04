@@ -157,8 +157,6 @@ body {
     border: 7px solid rgb(221, 174, 112);
     border-radius: 15px;
     background-color: rgb(211, 135, 164);
-    background-image: url("./sin2.webp");
-    background-size: cover;
     word-wrap: break-word;
 
 }
@@ -172,8 +170,10 @@ body {
 
 p {
    
+    position: relative;
     font-size: 18px;
     text-align: center;
+    white-space: nowrap;
     align-items: baseline;
 }
 
