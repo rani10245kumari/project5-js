@@ -178,11 +178,11 @@ p {
 }
 
 .space {
-    margin-left: 10px;
+   margin-left: 10px;
     line-height: 4px;
     overflow-y: scroll;
-    overflow-x: hidden;
-    height: 180px;
+    overflow-x: visible;
+    height: 190px;
 }
 
 .mark {
