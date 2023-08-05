@@ -156,20 +156,21 @@ body {
     width: 23vw;
     border: 7px solid rgb(221, 174, 112);
     border-radius: 15px;
-    background-color: rgb(211, 135, 164);
+    background-color: rgb(199, 150, 168);
+    /* background-image: url("./sin2.webp"); */
+    background-size: cover;
     word-wrap: break-word;
 
 }
 
 .headname {
     word-wrap: break-word;
-    font-size: 22px;
+    font-size: 32px;
     text-align: center;
-    color: rgb(231, 79, 163);
+    color: rgb(82, 3, 32);
 }
 
 p {
-   
     position: relative;
     font-size: 18px;
     text-align: center;
@@ -178,19 +179,21 @@ p {
 }
 
 .space {
-   margin-left: 10px;
+    margin-left: 10px;
     line-height: 4px;
     overflow-y: scroll;
     overflow-x: visible;
     height: 190px;
+    line-height: 30px;
 }
 
 .mark {
-    width: 6vw;
-    height: 5vh;
+    width: 20x;
+    height: 30px;
     text-decoration: none;
     position: relative;
     top: 0.6vh;
+    left: 0vw;
     display: inline-block;
     background-color: darkturquoise;
 }
@@ -222,7 +225,7 @@ p {
 .pop3 {
     height: 35vh;
     width: 22vw;
-    border: 4px solid rgb(202, 43, 96);
+    border: 4px solid rgb(192, 5, 120);
     border-radius: 15px;
     background-color: antiquewhite;
     position: fixed;
@@ -231,8 +234,8 @@ p {
 }
 
 .hh2 {
-    color: rgb(189, 5, 45);
-    font-size: 25px;
+    color: rgb(56, 35, 245);
+    font-size: 28px;
     font-weight: bold;
     text-align: center;
     word-wrap: break-word;
